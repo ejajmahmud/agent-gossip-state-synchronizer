@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-gossip-state-synchronizer"
+version = "0.1.0"
+description = "Epidemic anti-entropy gossip protocol with vector clocks for decentralized state replication across partitioned agents"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+agent-gossip-state-synchronizer = "agent_gossip_state_synchronizer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent_gossip_state_synchronizer*"]
